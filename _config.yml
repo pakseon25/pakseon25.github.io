@@ -4,7 +4,6 @@ highlighter:      rouge
 
 # Setup
 title:            박25
-tagline:          'A Jekyll theme'
 url:              https://pakseon25.github.io
 
 author:
@@ -30,3 +29,4 @@ sidebar_home_link:  false
 github:
   repo:             https://github.com/pakseon25
 
+disqus.shortname: 'pakseon25'
