@@ -1,6 +1,6 @@
 {% if site.disqus.shortname %}
   <div id="disqus_thread">
-    <button class="disqus-load" onClick="loadDisqusComments()">
+    <button class="disqus-load" onClick="loadDisqusComments()" style="display: none;">
       Load Comments
     </button>
   </div>
@@ -22,6 +22,12 @@
     s.src = '//{{ site.disqus.shortname }}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
+  }
+
+  var disqus_thread = document.getElementById("disqus_thread");
+  var load_buttons = disqus_thread.getElementsByClassName("disqus-load");
+  if (load_buttons.length > 0) {
+    load_buttons[0].click();
   }
   </script>
   <noscript>
