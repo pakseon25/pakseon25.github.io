@@ -5,9 +5,9 @@ categories:
   - R
 ---
 
-리눅스에서 환경 변수를 설정하기 위해 사용자 홈디렉터리에 있는 '.bashrc'파일을 수정하곤 했습니다.
-RStudio로 R 코딩을 하던 차에 환경 변수 설정이 필요하여 이번에도 '.bashrc'를 수정했는데 아무리 해도 환경 변수가 R 세션에서 보이지 않았습니다.
-한동안은 지금까지 했던 것처럼 환경 변수 정의 코드를 복사해서 붙여놓고 재실행했지만 매번 이렇게 하는 것이 거추장스럽기도 하고 "기술 부채"가 늘어나는 것처럼 보여 그다지 마음이 좋지는 않았습니다.
+리눅스에서 환경 변수를 설정하기 위해 '~/.bashrc'파일을 수정하곤 했습니다.
+RStudio로 R 코딩을 하던 차에 환경 변수 설정이 필요하여 이번에도 '~/.bashrc'를 수정했는데 아무리 해도 환경 변수가 R 세션에서 보이지 않았습니다.
+결국 한동안은 지금까지 했던 것처럼 환경 변수 정의 코드를 복사해서 붙여놓고 재실행했지만 매번 이렇게 하는 것이 거추장스럽기도 하고 흔히 하는 말로 "기술 부채"가 늘어나는 것처럼 보여 그다지 마음이 좋지는 않았습니다.
 
 이번 기회에 R에서 환경 변수 설정하는 방법을 제대로 알아두자고 생각했고 다행히도 문서가 잘 작성되어 있어서 필요한 정보를 얻을 수 있었습니다:
 - [R: Initialization at Start of an R Session](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html)
@@ -75,7 +75,7 @@ R_LIBS=~/R/library
 
 읽은 코드는 base 패키지에 포함됩니다.
 그러므로 기존에 있던 base 패키지의 내용을 덮어씌우지 않도록 조심해야 합니다.
-[이 문서](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html)에서는 `local`을 사용하는 것을 추천한다고 합니다.
+[R: Initialization at Start of an R Session](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html) 문서에서는 이런 문제를 피하기 위해 `local`을 사용하는 것을 추천한다고 합니다.
 `local`을 사용한 예가 맨 아래 예제 코드에 있습니다.
 
 ### 2-2. user 프로필 파일 읽기
