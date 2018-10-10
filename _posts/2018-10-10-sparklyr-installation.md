@@ -75,7 +75,7 @@ Content type 'application/x-gzip' length 225883783 bytes (215.4 MB)
 이 때는 위에서 설치하려던 버전이 없을 수 있는데 [Semantic Version 2.0 문서](https://semver.org/lang/ko/)에 따라 버전이 앞에서 부터 두 자리까지 같다면 테스트 목적으로는 크게 문제가 되지 않을 것이라 생각됩니다.
 저는 2.3.1 대신 가장 최근 릴리즈인 2.3.2 버전을 설치했습니다.
 
-압축된 패키지를 설치할 때는`spark_install_tar` 함수를 사용합니다.
+압축된 패키지를 설치할 때는`spark_install_tar()` 함수를 사용합니다.
 함수에 전달하는 인자는 패키지 파일 경로입니다.
 
 ```r
